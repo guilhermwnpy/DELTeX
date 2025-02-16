@@ -1,0 +1,103 @@
+\documentclass[tcc1,numbers]{coppe-delufs}
+
+% === Configurações de Idioma e Codificação ===
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+
+% === Pacotes Matemáticos e Simbólicos ===
+\usepackage{amsmath, amssymb, latexsym}
+
+% === Gráficos e Figuras ===
+\usepackage{graphicx}
+\graphicspath{{./figuras/}}  % Pasta das figuras
+\usepackage{rotating}
+\usepackage{subcaption}
+\usepackage{framed}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup[figure]{font=small}
+
+% === Tabelas e Listas ===
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{bigstrut}
+\usepackage{tabularx, booktabs}
+\usepackage{longtable}
+\usepackage{xtab}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{booktabs, makecell, ltablex, threeparttablex}
+\usepackage{enumitem} % Personalização de listas
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{R}{>{\RaggedRight}X}
+\newcolumntype{L}{>{\RaggedLeft}X}
+
+% === Cores e Formatação ===
+\usepackage{url, color}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{ragged2e}
+
+% === Referências e Hiperlinks ===
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage{hyperref}
+
+% === Algoritmos ===
+\usepackage[ruled,vlined]{algorithm2e}
+
+% === Notas de Rodapé Estáveis ===
+\usepackage[stable]{footmisc}
+
+% === Formatação de Títulos e Sumário ===
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\normalsize\bfseries}{\thechapter}{1em .}{} 
+\titlespacing*{\chapter}{0pt}{0pt}{*1}
+\titleformat{\section}[hang]{\normalfont\normalsize\bfseries}{\thesection}{1em .}{}
+\titlespacing*{\section}{0pt}{0pt}{*1}
+\titleformat{\subsection}[hang]{\normalfont\normalsize\bfseries}{\thesubsection}{1em .}{}
+\titlespacing*{\subsection}{0pt}{0pt}{*1}
+
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\contentsname}{SUMÁRIO}
+
+% === Contadores ===
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{table}{chapter}
+
+% === Outras Configurações ===
+\setlength{\parindent}{1.25cm}  % Recuo de parágrafo
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% === Símbolos e Abreviações ===
+\makelosymbols
+\makeloabbreviations
+
+% === Profundidade da Numeração ===
+\setcounter{secnumdepth}{5}
+
+% === Página em Branco ===
+\clearpage
+\thispagestyle{empty}
+
+\begin{document}
+
+\input{Texto/01-Capa} 
+\newpage
+
+\input{Texto/02-Sumario}
+
+\mainmatter
+\input{Texto/03-C1-introducao}
+
+% \backmatter
+% \bibliographystyle{unsrt-br}
+% \bibliography{RefBibliograficas}
+
+\end{document}
