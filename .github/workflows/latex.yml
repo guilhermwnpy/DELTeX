@@ -42,10 +42,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: Documento
+          path: ./public
       
       - name: Fazer commit e push do PDF e do README.md para a branch do gh-pages
         run: |
-          cd Documento
+          cd public
           git init -b temp
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
